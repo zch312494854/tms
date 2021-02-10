@@ -18,7 +18,8 @@
 		<div class="check">
 			<input type="radio" />
 		</div>
-		<button class='login-page-btn ' @click="loginBtnHandleClick">登录</button>
+		<!-- <button class='login-page-btn ' @click="loginBtnHandleClick">登录</button> -->
+		<van-button custom-class="login-page-btn"  type="primary">登录</van-button>
 		<button class="login-page-btn reg-button" @click="regBtnHandleclick">注册</button>
 	</view>
 </template>
@@ -80,10 +81,10 @@
 	
 	
 		.login-page-btn{
-		width: 30%;
-		background-color: rgb(55, 0, 255);
-		margin-top: 60rpx;
-
+			width: 30%;
+			display:block;
+			// background-color: rgb(55, 0, 255);
+			margin: 60rpx auto 0;
 		}
 		.reg-button{
 			margin-top: 30rpx;	
