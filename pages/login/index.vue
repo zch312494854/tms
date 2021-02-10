@@ -5,19 +5,20 @@
 		<img class='login-logo' src="@/static/boy.jpg" alt="帅哥"/>
 		<!-- </div > -->
 	    <view class='login-form'>   
-			<view class="username" >
+			<view class="username"  >
 				用户名
-				<input />
+				<input v-model="username"/>
 			</view>
-	    	<view class='password'>	密码
-				<input/>
+			 <!-- v-model="password"获取和变更数据 -->
+	    	<view class='password'  >	密码
+				<input type="password" v-model="password"/>
 			</view>
 		</view>
 		<div class="check">
-		
+			<input type="radio" />
 		</div>
-		<button class='login-button'>登录</button>
-		<button class="reg-button">注册</button>
+		<button class='login-page-btn ' @click="loginBtnHandleClick">登录</button>
+		<button class="login-page-btn reg-button" @click="regBtnHandleclick">注册</button>
 		
 		<uni-link ></uni-link>
 	</view>
@@ -37,11 +38,9 @@
 			}
 		},
 		methods: {
-			handleClick() {
-			let a = this.user
-				this.user = '叶'
-				this.colors="ss"
-				console.log(this.user, this.password)
+			loginBtnHandleClick() {
+			
+				console.log(this.username, this.password)
 			}
 		},
 		computed:{ //计算属性
@@ -79,17 +78,17 @@
 					border: 1px solid black;
 				}	  
 		}
-		.login-button{
-			width: 30%;
-			margin-top: 60rpx;
-			background-color: rgb(55, 0, 255);
+	
+	
+		.login-page-btn{
+		width: 30%;
+		background-color: rgb(55, 0, 255);
+		margin-top: 60rpx;
+
 		}
 		.reg-button{
-			width: 30%;
-			margin-top: 30rpx;
-			background-color: rgb(55, 0, 255);
+			margin-top: 30rpx;	
 		}
-	
 	}
 	page{
 		height: 100%;
