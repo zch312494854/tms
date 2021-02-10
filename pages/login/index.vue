@@ -11,7 +11,8 @@
 			</view>
 			 <!-- v-model="password"获取和变更数据 -->
 	    	<view class='password'  >	密码
-				<input type="password" v-model="password"/>
+				<!-- <input type="password" v-model="password"/> -->
+				<uni-easyinput ></uni-easyinput>
 			</view>
 		</view>
 		<div class="check">
@@ -19,8 +20,6 @@
 		</div>
 		<button class='login-page-btn ' @click="loginBtnHandleClick">登录</button>
 		<button class="login-page-btn reg-button" @click="regBtnHandleclick">注册</button>
-		
-		<uni-link ></uni-link>
 	</view>
 </template>
 
@@ -55,7 +54,7 @@
 	
     .container{
 		height: 100%;
-		background-color: green;
+		// background-color: green;
 		padding-top: 120rpx;
 		.login-title{
 
